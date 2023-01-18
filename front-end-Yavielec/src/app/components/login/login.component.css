@@ -1,0 +1,38 @@
+.gradient-custom-2 {
+  background:  linear-gradient(to right, #246bee, #365cd8, #dd8136, #b47745);
+  animation-name: bgimage;
+  animation-duration: 10s ;
+  animation-iteration-count: infinite;
+  }
+
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }
+
+  .rounded-3 {
+      box-shadow: 6px 6px 9px;
+  }
+
+  .text-center{
+      margin-bottom: 1vw;
+  }
+
+  .btn.btn-primary.btn-block.fa-lg.mb-3 {
+      background-color: #246bee;
+      padding: 9px 3vw;
+  }
+
+  @keyframes bgimage {
+      0%   {background:  linear-gradient(to right, #246bee, #365cd8, #dd8136, #b47745);}
+      25%  {background:  linear-gradient(to right, #b47745, #246bee, #365cd8, #dd8136);}
+      50%  {background:  linear-gradient(to right, #dd8136, #b47745, #246bee, #365cd8);}
+      100% {background:  linear-gradient(to right, #365cd8, #dd8136, #b47745, #246bee);}
+  }
