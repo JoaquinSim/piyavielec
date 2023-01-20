@@ -1,9 +1,15 @@
 .gradient-custom-2 {
-  background:  linear-gradient(to right, #246bee, #365cd8, #dd8136, #b47745);
+   /* 
+  background:  linear-gradient(to right, #246bee, #365cd8, #dd8136, #b47745);*/
   animation-name: bgimage;
-  animation-duration: 10s ;
+  animation-duration: 9s ;
   animation-iteration-count: infinite;
+  background: url(https://yavirac.edu.ec/img/slider/instalacion2.png);
+  background-size: cover;
+  background-position: center;
+  
   }
+
 
   @media (min-width: 768px) {
   .gradient-form {
@@ -31,8 +37,7 @@
   }
 
   @keyframes bgimage {
-      0%   {background:  linear-gradient(to right, #246bee, #365cd8, #dd8136, #b47745);}
-      25%  {background:  linear-gradient(to right, #b47745, #246bee, #365cd8, #dd8136);}
-      50%  {background:  linear-gradient(to right, #dd8136, #b47745, #246bee, #365cd8);}
-      100% {background:  linear-gradient(to right, #365cd8, #dd8136, #b47745, #246bee);}
-  }
+    25%   {background-image:  url(https://yavirac.edu.ec/img/galeria/docentes.png); }
+    50%   {background-image:  url(https://yavirac.edu.ec/img/slider/instalacion3.png); }
+    75%  {background-image:  url(https://pbs.twimg.com/media/FgFt65pXEAQTlXq?format=jpg&name=large); }
+}
