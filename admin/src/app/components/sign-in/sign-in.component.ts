@@ -12,7 +12,6 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-  public archivos : any = [];
   username: string = '';
   password: string = '';
   confirmPassword: string = '';
@@ -39,12 +38,10 @@ export class SignInComponent implements OnInit {
       this.toastr.error('Las passwords ingresadas son distintas', 'Error');
       return;
     }
-    const imagenCapturada = event.target.files[0]
     // Creamos el objeto
     const user: User = {
       username: this.username,
-      password: this.password,
-      imagen: this.archivos.push(imagenCapturada)
+      password: this.password
     }
 
 

@@ -13,7 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 // Componentes
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ListasComponent } from './components/listas/listas.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
@@ -24,7 +24,7 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     AppComponent,
     LoginComponent,
     SignInComponent,
-    DashboardComponent,
+    ListasComponent,
     HomeComponent,
     NavbarComponent,
     SpinnerComponent

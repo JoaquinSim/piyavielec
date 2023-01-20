@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
     const timer: Timer = setTimeout(() => {
       this.router.navigate(['/login'])
-    }, 5000);
+    }, 3000);
   }
 }
 

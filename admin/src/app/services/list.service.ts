@@ -14,12 +14,13 @@ export class ListService {
   constructor(private http: HttpClient) {
     this.myAppUrl = environment.endpoint;
     this.myApiUrl = 'api/list'
-  }
+   }
 
-  getList(): Observable<List[]> {
-    /*  const token = localStorage.getItem('token')
-     const headers = new HttpHeaders().set('Authorization',`Bearer ${token}`) */
-    /*     return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`, { headers: headers } ) */
-    return this.http.get<List[]>(`${this.myAppUrl}${this.myApiUrl}`)
-  }
+   registraList(list: List): Observable<any> {
+    return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, list);
+   }
+
+   listarList(list: List): Observable<string> {
+    return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}/home`, list)
+   }
 }

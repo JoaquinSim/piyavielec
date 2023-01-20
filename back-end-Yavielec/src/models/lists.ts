@@ -12,5 +12,9 @@ export const List = sequelize.define('list', {
     },
     description: {
         type: DataTypes.STRING
+    },
+    imagen: {
+        type: DataTypes.STRING
     }
+
 }, )
