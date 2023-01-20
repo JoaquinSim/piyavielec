@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   //variable
 
-  constructor(  private router: Router,) {}
+  constructor() { }
   ngOnInit(): void {
-    type Timer = ReturnType<typeof setTimeout>;
-
-    const timer: Timer = setTimeout(() => {
-      this.router.navigate(['/login'])
-    }, 3000);
   }
-}
 
+  redireccionar(){
+    const dom = document.getElementById('dom');
+    console.log(dom);
+  }
+
+}

@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db/connection';
 
-export const List = sequelize.define('list', {
+export const Product = sequelize.define('product', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -12,9 +12,5 @@ export const List = sequelize.define('list', {
     },
     description: {
         type: DataTypes.STRING
-    },
-    imagen: {
-        type: DataTypes.STRING
     }
-
 }, )
