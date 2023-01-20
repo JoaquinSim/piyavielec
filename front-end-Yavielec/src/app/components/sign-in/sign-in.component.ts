@@ -25,7 +25,7 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(event:any) {
+  addUser() {
 
     // Validamos que el usuario ingrese valores
     if (this.username == '' || this.password == '' || this.confirmPassword == '') {
@@ -38,10 +38,11 @@ export class SignInComponent implements OnInit {
       this.toastr.error('Las passwords ingresadas son distintas', 'Error');
       return;
     }
+
     // Creamos el objeto
     const user: User = {
       username: this.username,
-      password: this.password,
+      password: this.password
     }
 
     this.loading = true;
@@ -57,5 +58,4 @@ export class SignInComponent implements OnInit {
       }
     })
   }
-
 }

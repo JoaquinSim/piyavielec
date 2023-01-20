@@ -1,7 +1,6 @@
-import { Component, OnInit, VERSION  } from '@angular/core';
-import { List } from 'src/app/interfaces/list';
-import { ListService } from 'src/app/services/list.service';
-import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,23 +8,18 @@ import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} 
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  listProduct: Product[] = []
 
-
-
-  listProduct: List[] = []
-
-  constructor(private _listService: ListService, private http: HttpClient) { }
+  constructor(private _productService: ProductService) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   getProducts() {
-    this._listService.getList().subscribe(data => {
+    this._productService.getProducts().subscribe(data => {
       this.listProduct = data;
     })
   }
-
-
 
 }
