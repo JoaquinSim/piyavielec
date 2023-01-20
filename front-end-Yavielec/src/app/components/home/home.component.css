@@ -25,6 +25,12 @@
   color: white;
   text-shadow: 2px 2px 2px black;
   font-weight: 700;
+  
+}
+.animt{
+  animation: mymove 2s 1;
+  animation-timing-function: ease-in;
+  position: relative;
 }
 .icon-nav{
   display: flex;
@@ -41,11 +47,8 @@
   margin-left: 5px;
   transition: opacity 0.4s;
 }
-.icon-nav:hover a{
-  opacity: 1;
-  transition-timing-function: ease-in;
-  
-}
-.icon-nav:hover{
-  cursor:pointer ;
+
+@keyframes mymove {
+  from {left: -300px; opacity: 0;}
+  to {left: 0px; opacity: 1;}
 }
